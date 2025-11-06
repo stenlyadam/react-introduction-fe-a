@@ -10,12 +10,13 @@ const RestAPI = () => {
   }, []);
   return (
     <>
-      {users.map(({ name, id }) => (
+      {users.map(({ name, id, picture }) => (
         <div
           key={id}
           className="bg-red-300 border border-black rounded-xl m-4 p-2"
         >
           {name}
+          <img src={`./${picture}`} className="w-20 h20" />
         </div>
       ))}
     </>
